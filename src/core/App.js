@@ -1,27 +1,25 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import test from "./test";
 import Main from "./Main";
 import SecureRouterWrapper from "../common/Auth/SecureRouterWrapper";
 import Error from "./pages/Error";
 import Dashboard from "./pages/Dashboard";
+import Login from "./auth/login";
 
 const App = (props) => {
 	return (
 		<>
-			<BrowserRouter>
+			<SecureRouterWrapper>
 				<Switch>
 					<Main>
-						<SecureRouterWrapper>
-							<Route path="/" component={Dashboard} exact/>
-							<Route path="/inbox" component={test} exact/>
-							{/*<Redirect to={"/404"} />*/}
-							{/*<Route path={"/404"} component={Error}/>*/}
-						</SecureRouterWrapper>
+						<Route path="/" component={Dashboard} exact/>
+						<Route path="/inbox" component={test}/>
+						<Route path="/login " component={Login}	/>
 					</Main>
 				</Switch>
-			</BrowserRouter>
+			</SecureRouterWrapper>
 		</>
 	);
 };

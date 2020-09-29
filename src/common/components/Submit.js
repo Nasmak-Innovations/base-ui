@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 
-class Button extends PureComponent {
+class Submit extends Component {
 	render() {
 		return (
 			<button type="submit" className={this.props["className"] || "button bg-theme-1 text-white mt-5"}>{this.props["text"]}</button>
@@ -8,4 +8,4 @@ class Button extends PureComponent {
 	}
 }
 
-export default Button;
+export default Submit;

@@ -4,6 +4,7 @@ class Dashboard extends Component {
 	render() {
 		return (
 			<div className="grid grid-cols-12 gap-6">
+
 				<div className="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">
 					<div className="col-span-12 mt-8">
 						<div className="intro-y flex items-center h-10">
